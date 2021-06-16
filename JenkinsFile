@@ -1,0 +1,159 @@
+pipeline {
+
+ 
+
+
+agent any
+
+ 
+
+
+environment {
+
+ 
+
+
+CI = 'true'
+
+ 
+
+
+}
+
+ 
+
+
+stages {
+
+ 
+
+
+stage('Hello') {
+
+ 
+
+
+steps {
+
+ 
+
+
+echo 'Hello World'
+
+ 
+
+
+}
+
+ 
+
+
+}
+
+ 
+
+
+stage('Cloning Git') {
+
+ 
+
+
+steps {
+
+ 
+
+
+git 'https://github.com/random3900/CalenDraft.git'
+
+ 
+
+
+}
+
+ 
+
+
+}
+
+ 
+
+
+stage('Install dependencies') {
+
+ 
+
+
+steps {
+
+ 
+
+
+bat '''npm install'''
+
+ 
+
+
+}
+
+ 
+
+
+}
+
+ 
+
+ 
+
+ 
+
+stage('Docker image creation') {
+
+ 
+
+
+steps {
+
+ 
+
+
+bat '''docker login --username sainath0210 --password sainath0210
+
+ 
+
+
+docker build . -t sainath0210/calendraft --pull=true
+
+ 
+
+
+docker push sainath0210/calendraft
+
+ 
+
+
+'''
+
+ 
+
+
+echo "Completed docker image building"
+
+ 
+
+
+}
+
+ 
+
+
+}
+
+ 
+
+
+}
+
+ 
+
+
+}

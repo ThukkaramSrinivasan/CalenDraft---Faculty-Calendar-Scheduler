@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #EEEEEE;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@.1.2/css/themify-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../CSS/dash_style.css">
+        <link rel="stylesheet" href="../assets/css/fullcalendar-3.9.0/fullcalendar.min.css">
+        <link rel="stylesheet" href="../assets/css/fullcalendar-3.9.0/fullcalendar.print.min.css"  media='print'>
+        <link rel="stylesheet" href="../assets/js/calendar/bootstrap_calendar.css">
+        <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/moment.min.js'></script>
+        <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/jquery.min.js'></script>
+        <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+        <script src="https://kit.fontawesome.com/91e4545beb.js" crossorigin="anonymous"></script>
+        <link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+        <link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css' rel='stylesheet' />
+
+        <style>
+            body {
+              margin: 40px 10px;
+              padding: 0;
+              font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+              font-size: 14px;
+            }
+            #calendar {
+              max-width: 70%;
+              margin-left: 22% ;
+            }
+            .hoverEffect {
+              font-size: 29px;
+              position: absolute;
+              margin: 30px 55px;
+              cursor: pointer;
+          }
+          .ui-datepicker-trigger
+          {
+            background: transparent;
+              border: none;
+              margin: 0!important;
+              padding: 0!important;
+          }
+          .datetimepicker .input-group-addon {
+              background-color: #f9f9f9;
+              border-radius: 0;
+              border-top-right-radius: 3px;
+              border-bottom-right-radius: 3px;
+              cursor: pointer;
+              height: 2.1em;
+              border: 1px solid #ccc;
+              
+          }
+          .fc-state-default.fc-corner-right
+          {
+            border-radius: 0px;
+          }
+
+          .fc-day-top .fc-mon .fc-past{
+              background-color: #ccc;
+          }
+
+          .fc-content-skeleton tr{
+            background-color: #fff;
+            color: black;
+            border: 1px solid #777;
+          }
+
+          .fc-head{
+              background-color: #6d5cad;
+          }
+          </style>
+    </head>
+    <body style="background-color: #EEEEEE;">
+        <input type="checkbox" name="" id="sidebar-toggle">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="brand" style="background-color: #6d5cad; ">
+                    <!-- <span class=""></span>  -->
+                    <span style="background-color: #6d5cad">Hello User!</span>
+                </h3> 
+                <label for="sidebar-toggle" class="fas fa-bars" style="background-color: #6d5cad; font-size: 30px;"></label>
+            </div>
+            <div class="sidebar-menu">
+                <ul >
+                    <li>
+                        <a href="" style="background-color: #6d5cad">
+                            <span class="fas fa-home" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span >Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" style="background-color: #6d5cad;">
+                            <span class="fas fa-angle-up" style="background-color: #6d5cad; font-size: 30px;"></span>
+                            <span style="background-color: #6d5cad;">Category 1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="fas fa-angle-up" style="background-color: #6d5cad; font-size: 30px;"></span>
+                            <span style="background-color: #6d5cad;">Category 2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="fas fa-angle-up" style="background-color: #6d5cad; font-size: 30px;"></span>
+                            <span style="background-color: #6d5cad;"> Category 3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="fas fa-angle-up" style="background-color: #6d5cad; font-size: 30px;"></span>
+                            <span style="background-color: #6d5cad;">Category 4</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="main-content" >
+            
+            <header>
+                <form class="form-inline">
+                    <div class="search-wrapper">
+                        <span class="fas fa-search" style="font-size: 150%;"></span>
+                        <input class="form-control"type="search" placeholder="Search">
+                    </div>
+                </form>
+                <div class="social-icons">
+                    <span class="far fa-bell" style="font-size: 150%;"></span> <!--Bell-->
+                    <span class="far fa-comment-dots" style="font-size: 150%; "></span> <!--Comment-->
+                    <div></div>
+                </div>
+            </header>
+        
+        
+            <main style="background-color: #EEEEEE;">
+                
+                <!-- <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
+                    <h5 class="mb-0" ><strong>Fullcalendar</strong></h5>
+                    <span class="text-secondary">Pages <i class="fa fa-angle-right"></i> fullcalendar</span>
+                    
+                    <div class="row mt-3">
+                        <div class="col-md-12 col-sm-12">
+                            Full Calendar
+                            <div class="mt-1 mb-3 p-3 button-container bg-white border shadow-sm lh-sm">
+                                <div class="email-msg">
+                                    
+                                    <div class="table-responsive" id="calendarFull"></div>
+    
+                                </div>
+                            </div>
+                            /Email messages -->
+    
+                        </div>
+                    </div>
+                    <div id='calendar'></div>
+                    <br>
+                    <div class = "row" style = "background: none; margin-left: 50px;">
+                        <input type="file" id="fileUpload" />
+                        <input type="button" id="upload" value="Upload" onclick="Upload()"/>
+                        <div id="dvExcel"></div>
+                    </div>
+                    <script src = "../index.js"></script>
+                    <!--Footer-->
+                    <!-- <div class="row mt-5 mb-4 footer">
+                        <div class="col-sm-8">
+                            <span>&copy; All rights reserved 2019 designed by <a class="text-info" href="#">A-Fusion</a></span>
+                        </div>
+                        <div class="col-sm-4 text-right">
+                            <a href="#" class="ml-2">Contact Us</a>
+                            <a href="#" class="ml-2">Support</a>
+                        </div>
+                    </div> -->
+                    <!--Footer-->
+    
+                <!-- </div> -->
+
+            </main>
+        </div>
+            
+        
+    </body>
+</html>

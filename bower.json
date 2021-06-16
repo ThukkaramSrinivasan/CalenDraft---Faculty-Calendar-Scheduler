@@ -1,0 +1,20 @@
+{
+  "name": "calendraft",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "AnkithaKrishnamoorthy <ankitha.krishnamoorthy@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/random3900/CalenDraft",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sweetalert": "^1.0.1"
+  }
+}

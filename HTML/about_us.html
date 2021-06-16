@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #EEEEEE;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@.1.2/css/themify-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../CSS/dash_style.css">
+        <script src="https://kit.fontawesome.com/91e4545beb.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: #EEEEEE;">
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                  <a class="navbar-brand" href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; max-width: 800px; "><img src="../logo/logo1.png" height="100px" width="280x"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav pills ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../HTML/index.html">Home</a>
+                          </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../HTML/login.html">Login</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="../HTML/about_us.html">About Us</a>
+                          </li>
+                      </ul>
+                </div>
+            </nav>
+        </section>
+        <!-- <script type='text/javascript'>
+            function submit1()
+            {
+               document.forms["form1"].submit();
+            }
+            function submit2()
+            {
+               document.forms["form2"].submit();
+            }
+            function submit3()
+            {
+               document.forms["form3"].submit();
+            }
+            function submit4()
+            {
+               document.forms["form4"].submit();
+            }
+            function opennotify() {
+                document.getElementById("notifypopup").style.display = "block";
+            }
+            function openprofile() {
+                document.getElementById("profilepopup").style.display = "block";
+            }
+            function closenotify() 
+            {
+                document.getElementById("notifypopup").style.display = "none";
+            }
+            function closeprofile() 
+            {
+                document.getElementById("profilepopup").style.display = "none";
+            }
+        </script>
+        <input type="checkbox" name="" id="sidebar-toggle">
+        <div class="sidebar">
+            <div name='namediv' id='namediv' class="sidebar-header">
+                <h3 name='nameh3' id='nameh3' class="brand" style="background-color: #6d5cad; ">
+                     <span class=""></span> 
+                    <span name='name' id='name' style="background-color: #6d5cad">Hello User!</span>
+                </h3> 
+                <label for="sidebar-toggle" class="fas fa-bars" style="background-color: #6d5cad; font-size: 30px;"></label>
+            </div>
+            <div class="sidebar-menu">
+                <ul >
+                    <li>
+                        <form id = 'form1' name = 'form1' action="http://localhost:8080/index_redirect" method="POST" style="background-color: #6d5cad;"></form>
+                        <a href="javascript: submit1();" style="background-color: #6d5cad; text-decoration: none;">
+                            <span class="fas fa-home" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span >Home</span>
+                        </a>
+                        </form>
+                    </li>
+                    <li>
+                        <form id = 'form2' name = 'form2' action="http://localhost:8080/calendar_redirect" method="POST" style="background-color: #6d5cad;"></form>
+                        <a href="javascript: submit2();" style="background-color: #6d5cad; text-decoration: none;">
+                            <span class="fas fa-calendar" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span style="background-color: #6d5cad;">Calendar</span>
+                        </a>
+                        </form>
+                    </li>
+                    <li>
+                        <form id = 'form3' name = 'form3' action="http://localhost:8080/reminder_redirect" method="POST" style="background-color: #6d5cad;">
+                        <a href="javascript: submit3();" style="text-decoration: none;">
+                            <span class="fas fa-clock" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span style="background-color: #6d5cad;">Reminder</span>
+                        </a>
+                        </form>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="fas fa-angle-right" style="background-color: #6d5cad; font-size: 30px;"></span>
+                            <span style="background-color: #6d5cad;"> Category 3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <form id = 'form4' name = 'form4' action="http://localhost:8080/login_redirect" method="POST" style="background-color: #6d5cad;"></form>
+                        <a href="javascript: submit4();" style="background-color: #6d5cad; text-decoration: none;">
+                            <span class="fas fa-sign-out-alt" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span >Log-Out</span>
+                        </a>
+                        </form>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="main-content" style="background-color: #EEEEEE;">
+            <header>
+                <form class="form-inline">
+                    <div class="search-wrapper">
+                        <span class="fas fa-search" style="font-size: 150%;"></span>
+                        <input class="form-control"type="search" placeholder="Search">
+                    </div>
+                </form>
+                Notification popup
+                <div class="notify-popup" id="notifypopup">
+                    <a onclick="closenotify()"><button class="btn-danger btn-sm" style="right:0; color: white; border-color: none; align-items: center; border-radius: 25%;">x</button></a>
+                    <h2>Notifications</h2>
+                    <br>
+                    <p>Notification 1</p>
+                    <hr>
+                    <p>Notification 2</p>
+                </div>
+                Profile popup
+                <div class="profile-popup" id="profilepopup">
+                    <a onclick="closeprofile()" style="position:absolute; right: 2%; color:white; font-size:25px; text-align: end; font-weight: 700;"><button class="btn-danger btn-sm" style="color: white; border-color: none; align-items: center; border-radius: 25%;">x</button></a>
+                    <h2>User</h2>
+                    <ul>
+                        <li style="padding-top:10px; font-size: 18px;">
+                            <a href="javascript: submit4();" style="text-decoration: none; color: black;">
+                                <span class="fas fa-user" style="text-decoration: none; color: black;"></span>
+                                <span>View Profile</span>
+                            </a>
+                        </li>
+                        <hr>
+                        <li style=" font-size: 18px;">
+                            <a href="javascript: submit4();" style="text-decoration: none; color: black;">
+                                <span class="fas fa-sign-out-alt" style="text-decoration: none; color: black;"></span>
+                                <span >Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social-icons"
+                    <a onclick="opennotify()" style="text-decoration: none; color: black;"><span class="far fa-bell" style="font-size: 150%;"><span class="badge-bell"></span></span></a>Bell
+                    <a onclick="openprofile()" style="text-decoration: none; color: black;"><div></div></a>
+                </div>
+            </header> -->
+        
+        
+            <main style="background-color: #EEEEEE;">
+                <h2 class="dash-title" style="background-color: #EEEEEE;">Developers</h2>
+                <div class="dash-cards " style="background-color: #EEEEEE; ">
+
+                    <div class="card-single" style = "width: 23.5rem;">
+                        <div class="card-header text-white" style="background-color: #6d5cad; font-weight: bold; font-size: large;">
+                            Alapati Venkata Sai Sriram
+                        </div>
+                        <div class="card-body">
+                            <img src="../img/Profile-5.jpeg" height="312px" width="334px">
+                            
+                        </div>
+                        <h2 style="padding-left:30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:#444444;">CB.EN.U4CSE18106</h2>
+                    </div>
+                    
+                    
+
+                    <div class="card-single" style = "width: 23.5rem;">
+                        <div class="card-header text-white" style="background-color: #6d5cad; font-weight: bold; font-size: large;">
+                            Ankitha Krishnamoorthy 
+                        </div>
+                        <div class="card-body">
+                            <img src="../img/Profile-2.jpg" height="312px" width="334px">
+                            
+                        </div>
+                        <h2 style="padding-left:30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:#444444;">CB.EN.U4CSE18107</h2>
+                    </div>
+
+                    <div class="card-single" style = "width: 23.5rem;">
+                        <div class="card-header text-white" style="background-color: #6d5cad; font-weight: bold; font-size: large;">
+                            Shashank Varma P
+                        </div>
+                        <div class="card-body">
+                            <img src="../img/Profile-6.jpeg" height="312px" width="334px">
+                            
+                        </div>
+                        <h2 style="padding-left:30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:#444444;">CB.EN.U4CSE18139</h2>
+                    </div>
+
+                </div>
+
+                    &nbsp;
+                <div class="dash-cards " style="background-color: #EEEEEE; ">
+                    
+
+
+                    <div class="card-single" style = "width: 23.5rem;">
+                        <div class="card-header text-white" style="background-color: #6d5cad; font-weight: bold; font-size: large;">
+                            Roopa Vidhya G
+                        </div>
+                        <div class="card-body">
+                            <img src="../img/Profile-1.png" height="312px" width="334px">
+                        </div>
+                        <h2 style="padding-left:30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:#444444;">CB.EN.U4CSE18143</h2>
+                        
+                    </div>
+
+
+                    
+
+                    <div class="card-single" style = "width: 23.5rem;">
+                        <div class="card-header text-white" style="background-color: #6d5cad; font-weight: bold; font-size: large;">
+                            C Sainath
+                        </div>
+                        <div class="card-body">
+                            <img src="../img/Profile-3.jpeg" height="312px" width="334px">
+                            &nbsp;
+                            
+
+                        </div>
+                        <h2 style="padding-left:30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:#444444;">CB.EN.U4CSE18146</h2>
+                    </div>
+
+
+                    <div class="card-single" style = "width: 23.5rem;">
+                        <div class="card-header text-white" style="background-color: #6d5cad; font-weight: bold; font-size: large;">
+                            Thukkaram S
+                        </div>
+                        <div class="card-body" style="align-items: center;">
+                            
+                            <img src="../img/Profile-4.png" >
+                            
+                        </div>
+                        <h2 style="padding-left:30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:#444444;">CB.EN.U4CSE18156</h2>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+            
+        <script src = "../jquery.js"></script>
+        <script src = "../indexScript.js"></script>
+    </body>
+</html>

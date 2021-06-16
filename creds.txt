@@ -1,0 +1,13 @@
+ClientID:22690238248-oj6vfjfe67q2kfo2cjjf9e4e5882v42g.apps.googleusercontent.com
+
+ClientSecret:jjiAAd639Y2dLd6rSU8Vywmg
+
+web-push:vapid keys:
+
+Public Key:
+BErs7KSrHF1FW_xpeQmoliYuyfFW1Lzt7g499Xe6_uIruTMk5z3GWFxiAA2YVVbyy4SDrj1PmTx_IiwBL7rIcKE
+
+Private Key:
+oHER6KGKHmWA6fuGRcz3xcZ-NIDoxXS15WMdkcHmSx4
+
+GitHubVSCode:vscode://vscode.github-authentication/did-authenticate?windowid=1&code=a9a7f4ac7cd41a391aa5&state=1abdbcf5-8c5d-452f-89f4-ff746d2cf1c3

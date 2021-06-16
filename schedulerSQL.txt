@@ -1,0 +1,27 @@
+CREATE TABLE users(
+email VARCHAR(100),
+password VARCHAR(100),
+PRIMARY KEY(email));
+
+INSERT INTO users VALUES('user@gmail.com','user123');
+INSERT INTO users VALUES('admin@gmail.com','admin123');
+
+ALTER TABLE users
+ADD column (Name VARCHAR(100));
+UPDATE users
+SET Name = 'Admin' WHERE email LIKE '%admin%';
+
+
+CREATE TABLE reminders(
+email VARCHAR(100),
+date DATE,
+time TIME,
+msg VARCHAR(100),
+sound BOOLEAN,
+name VARCHAR(100)
+);
+
+CREATE TABLE temp(
+  email varchar(100),
+  name varchar(100)
+);

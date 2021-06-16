@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "aws-sdk": "^2.858.0",
+    "body-parser": "^1.19.0",
+    "crypto-secure-random-digit": "^1.0.9",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fullcalendar": "^5.6.0",
+    "jest": "^27.0.4",
+    "mongodb": "^3.6.6",
+    "mysql": "^2.18.1",
+    "node-notifier": "^10.0.0",
+    "node-schedule": "^2.0.0",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7",
+    "powertoast": "^1.2.3",
+    "request": "^2.88.2",
+    "setimmediate": "^1.0.5",
+    "sweetalert2": "^10.16.7",
+    "use": "^3.1.1",
+    "web-push": "^3.4.4"
+  }
+}

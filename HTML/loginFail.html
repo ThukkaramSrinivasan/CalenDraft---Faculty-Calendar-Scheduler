@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <title>calendraft</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+    </head>
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+    <script type="text/javascript">
+        function validate()
+        {
+            var username=document.getElementById("email");
+            var password=document.getElementById("password");
+            var regx=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+            if(username.value.trim()=="")
+            {
+                alert("No blank values allowed!");
+                return false;
+            }
+            else if(password.value.trim()=="")
+            {
+                alert("No blank values allowed!");
+                return false;
+            }
+            else if(password.value.trim().length<=5)
+            {
+                alert("Password must be atleast 6 characters in length!!");
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+
+    <body style="overflow: hidden;">
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                  <a class="navbar-brand" href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; max-width: 800px; "><img src="../logo/logo1.png" height="100px" width="280x"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav pills ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../HTML/index.html">Home</a>
+                          </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../HTML/login.html">Login</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="../HTML/about_us.html">About Us</a>
+                          </li>
+                      </ul>
+                </div>
+            </nav>
+        </section>
+            <div class="alert alert-warning" style="color:black">
+                <center><strong>Access Denied. </strong>Incorrect Credentials</center>
+            </div>
+    <div class="container">
+        <div class="row py-5 mt-4 align-items-center">
+            <!-- For Demo Purpose -->
+            <div class="col-md-6 pr-lg-5 mb-5 mb-md-0" style="margin-left: -100px;margin-top: 20px;">
+                <div class="fade-in">
+                    <img src="../img/img1.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
+                </div>
+            </div>
+            <!-- Registeration Form -->
+            <div class="col-md-7 col-lg-6 ml-auto" style="margin-top: 40px;">
+                <h1 style="font-size: 50px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-left: 120px;">Login Page</h1>
+                <form onsubmit='return validate()' action="http://localhost:8080/login" method="POST">
+                    <div class="row">
+                        <!-- Email Address -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <em class="fa fa-envelope text-muted"></em>
+                                </span>
+                            </div>
+                            <input id="email" type="text" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                        </div>
+                        <!-- Password -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <em class="fa fa-lock text-muted"></em>
+                                </span>
+                            </div>
+                            <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="form-group col-lg-12 mx-auto mb-0">
+                            <a href="#" class="btn btn-dark btn-block py-2">
+                                <button type="submit" id="login" style="font-weight: bold;" class="btn btn-dark btn-block py-2">Login to your account</button>
+                            </a>
+                        </div>
+                        &nbsp;
+                        <div class="text-center w-100">
+                            <p class="text-muted font-weight-bold">Forgot your Password? <a href="../HTML/reset1.html" class="text-primary ml-2">Click here!</a></p>
+                        </div>
+                        <!-- Divider Text -->
+                        <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                            <div class="border-bottom w-100 ml-5"></div>
+                            <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                            <div class="border-bottom w-100 mr-5"></div>
+                        </div>
+                        <!-- Social Login -->
+                        <div class="form-group col-lg-12 mx-auto">
+                            <a href="http://localhost:8080/google" class="btn btn-primary btn-block py-2 btn-facebook">
+                                <em class="fa fa-google mr-2"></em>
+                                <span class="font-weight-bold">Continue with Google</span>
+                            </a>
+                            <a href="#" class="btn btn-primary btn-block py-2 btn-twitter">
+                                <em class="fa fa-linkedin mr-2"></em>
+                                <span class="font-weight-bold">Continue with LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

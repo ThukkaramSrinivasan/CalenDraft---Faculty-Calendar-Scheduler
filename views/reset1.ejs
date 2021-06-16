@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+    </head>
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+    <script type="text/javascript">
+        function validate()
+        {
+            var username=document.getElementById("email");
+            var password=document.getElementById("password");
+            var regx=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+            if(username.value.trim()=="")
+            {
+                alert("No blank values allowed!");
+                return false;
+            }
+            else if(password.value.trim()=="")
+            {
+                alert("No blank values allowed!");
+                return false;
+            }
+            else if(password.value.trim().length<=5)
+            {
+                alert("Password must be atleast 6 characters in length!!");
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+
+    <body style="overflow: hidden;">
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                  <a class="navbar-brand" href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; max-width: 800px; "><img src="../logo/logo1.png" height="100px" width="280x"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav pills ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../HTML/index.html">Home</a>
+                          </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../HTML/login.html">Login</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="../HTML/about_us.html">About Us</a>
+                          </li>
+                      </ul>
+                </div>
+            </nav>
+        </section>
+        <% if (denied == 1){%>
+            <div class="alert alert-warning" style="color:black">
+                <center><strong>Incorrect Credentials</strong></center>
+            </div>
+        <% } %>
+    <div class="container">
+        <div class="row py-5 mt-4 align-items-center">
+            <!-- For Demo Purpose -->
+            <div class="col-md-6 pr-lg-5 mb-5 mb-md-0" style="margin-left: -100px;margin-top: 20px;">
+                <div class="fade-in">
+                    <img src="../img/img6.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
+                </div>
+            </div>
+            <!-- Registeration Form -->
+            <div class="col-md-7 col-lg-6 ml-auto" style="margin-top: 40px;">
+                <h1 style="font-size: 30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-left: 140px;">Forgot Password</h1>
+                <form onsubmit='return validate()' action="http://localhost:8080/reset1" method="POST">
+                    <div class="row">
+                        <!-- Email Address -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-envelope text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="email" type="text" id="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="form-group col-lg-12 mx-auto mb-0">
+                            <a href="#" class="btn btn-dark btn-block py-2">
+                                <button type="submit" id="login" style="font-weight: bold;" class="btn btn-dark btn-block py-2">Send Password Reset Mail</button>
+                            </a>
+                        </div>
+                        &nbsp;
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

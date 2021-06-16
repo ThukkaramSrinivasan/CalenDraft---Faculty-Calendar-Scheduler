@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #EEEEEE;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@.1.2/css/themify-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../CSS/dash_style.css">
+        <script src="https://kit.fontawesome.com/91e4545beb.js" crossorigin="anonymous"></script>
+
+        <link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css' rel='stylesheet' />
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/
+        bootstrap.min.css'>
+        <link href='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/moment.min.js'></script>
+        <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/jquery.min.js'></script>
+        <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+        <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+
+        <!--Sweetalert-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.5.0/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css" id="theme-styles">
+        
+
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.5.0/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css" id="theme-styles">
+
+        <!-- <script src="sweetalert2.all.min.js"></script>  -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7.1.0/dist/promise.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.6/sweetalert2.min.js"> </script> 
+
+
+
+        <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
+        <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+        <link href='../fullcalendar/main.css' rel='stylesheet' />
+        <!-- <link rel="stylesheet" type="text/scss" href="sweetalert2.scss"> -->
+        <script src='../fullcalendar/main.js'></script>
+
+        <!-- anki -->
+        <link rel="stylesheet" type="text/scss" href="sweetalert2.scss">
+        <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js'></script>
+        <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
+        <script src="http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery-ui.custom.min.js"></script>
+        <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js'></script>
+
+
+        <script>
+
+        </script>
+
+        <style>
+            body {
+              margin: 40px 10px;
+              padding: 0;
+              font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+              font-size: 14px;
+            }
+            #calendar {
+              max-width: 900px;
+              margin: 0 auto;
+            }
+            .hoverEffect {
+              font-size: 29px;
+              position: absolute;
+              margin: 30px 55px;
+              cursor: pointer;
+            }
+            .ui-datepicker-trigger
+            {
+                background: transparent;
+                border: none;
+                margin: 0!important;
+                padding: 0!important;
+            }
+            .datetimepicker .input-group-addon {
+                background-color: #f9f9f9;
+                border-radius: 0;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                cursor: pointer;
+                height: 2.1em;
+                border: 1px solid #ccc;
+                
+            }
+            .fc-state-default.fc-corner-right
+            {
+                border-radius: 0px;
+            }
+            .fc-content{
+                color:black;
+            }
+            .fc-content-skeleton table thead tr{
+                color:black;
+                background-color: #f9f9f9;
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body style="background-color: #EEEEEE;">
+        <script type='text/javascript'>
+            function submit1()
+             {
+                document.forms["form1"].submit();
+             }
+             function submit2()
+             {
+                document.forms["form2"].submit();
+             }
+             function submit3()
+             {
+                document.forms["form3"].submit();
+             }
+             function submit4()
+             {
+                document.forms["form4"].submit();
+             }
+             function submit5()
+             {
+                document.forms["form5"].submit();
+             }
+        </script>
+        <input type="checkbox" name="" id="sidebar-toggle">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="brand" style="background-color: #6d5cad; ">
+                    <!-- <span class=""></span>  -->
+                    <span style="background-color: #6d5cad">Hello COE!</span>
+                </h3> 
+                <label for="sidebar-toggle" class="fas fa-bars" style="background-color: #6d5cad; font-size: 30px;"></label>
+            </div>
+            <div class="sidebar-menu">
+                <ul >
+                    <li>
+                        <form id = 'form1' name = 'form1' action="http://localhost:8080/coe_redirect" method="POST" style="background-color: #6d5cad;"></form>
+                        <a href="javascript: submit1();" style="background-color: #6d5cad; text-decoration: none;">
+                            <span class="fas fa-home" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span >Home</span>
+                        </a>
+                        </form>
+                    </li>
+                    <li>
+                        <form id = 'form2' name = 'form2' action="http://localhost:8080/coe_calendar_redirect" method="POST" style="background-color: #6d5cad;"></form>
+                        <a href="javascript: submit2();" style="background-color: #6d5cad; text-decoration: none;">
+                            <span class="fas fa-calendar" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span style="background-color: #6d5cad;">Calendar</span>
+                        </a>
+                        </form>
+                    </li>
+                    <li>
+                        <form id = 'form3' name = 'form3' action="http://localhost:8080/coe_reminder_redirect" method="POST" style="background-color: #6d5cad;">
+                        <a href="javascript: submit3();" style="text-decoration: none;">
+                            <span class="fas fa-clock" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span style="background-color: #6d5cad;">Reminder</span>
+                        </a>
+                        </form>
+                    </li>
+                    <li>
+                        <form id = 'form4' name = 'form4' action="http://localhost:8080/coe_assign_redirect" method="POST" style="background-color: #6d5cad;">
+                        <a href="javascript: submit4();" style="text-decoration: none;">
+                            <span class="fas fa-user" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span style="background-color: #6d5cad;">Assign Faculty</span>
+                        </a>
+                        </form>
+                    </li>
+                    <li>
+                        <form id = 'form5' name = 'form5' action="http://localhost:8080/login_redirect" method="POST" style="background-color: #6d5cad;"></form>
+                        <a href="javascript: submit5();" style="background-color: #6d5cad; text-decoration: none;">
+                            <span class="fas fa-sign-out-alt" style="background-color: #6d5cad; font-size: 25px;"></span>
+                            <span >Log-Out</span>
+                        </a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content" >
+
+            <header style="height: 8%;">
+                <form class="form-inline" style=" position:relative; top:25%;">
+                    <div class="search-wrapper">
+                        <span class="fas fa-search" style="font-size: 150%;"></span>
+                        <input class="form-control"type="search" placeholder="Search">
+                    </div>
+                </form>
+                <div class="social-icons" style="float:right; position:relative; top:-35%;">
+                    <span class="far fa-bell" style="font-size: 150%;"></span> 
+                    <span class="far fa-comment-dots" style="font-size: 150%; "></span> 
+                    <div></div>
+                </div>
+            </header>
+
+            <main style="background-color: #EEEEEE;">
+                <div id='calendar'></div>
+                &nbsp;
+                <div class="container" style="background-color: #EEEEEE;">
+                    <div class="row" style="background-color: #EEEEEE;">
+                        <div class="col-4" style="background-color: #EEEEEE;"><h4 style="background-color: #EEEEEE;">Upload TimeTable</h4></div>
+                        <div class="col-6" style="background-color: #EEEEEE;"><input class="form-control " type="file" id="fileUpload_tt" /></div>
+                    </div>
+                    &nbsp;
+                    <div class="row" style="background-color: #EEEEEE;">
+                        <div class="col-4" style="background-color: #EEEEEE;"><h4 style="background-color: #EEEEEE;">Upload Academic Calendar</h4></div>
+                        <div class="col-6" style="background-color: #EEEEEE;"><input class="form-control" type="file" id="fileUpload_cal" /></div>
+                    </div>
+                    <buttton class="btn" style="background-color: #6d5cad; color: white;" type="button" id = "upload" value = "Upload">Upload</buttton>
+                </div>
+                <div id="dvExcel"></div>
+                <script src ="../calendarScript.js"></script>
+            </main>
+        </div>
+    </body>
+</html>
